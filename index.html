@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MiniGame</title>
+    <meta name="description" content="MiniGame — ESP32 flashing site for TFT SPI and OLED I2C display project." />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <div class="page-shell">
+      <header class="topbar">
+        <div class="brand">
+          <span class="brand-mark">◉</span>
+          <span class="brand-name">MiniGame</span>
+        </div>
+        <nav class="nav">
+          <a href="#about">О проекте</a>
+          <a href="#features">Функции</a>
+          <a href="#pinout">Распиновка</a>
+        </nav>
+      </header>
+
+      <main>
+        <section class="hero">
+          <div class="hero-copy">
+            <p class="eyebrow">ESP32 · TFT SPI · OLED I2C</p>
+            <h1>MiniGame</h1>
+            <p class="lead">
+              Проект игровой панели на ESP32 с двумя дисплеями: TFT через SPI и OLED через I2C.
+            </p>
+
+            <div class="cta-row">
+              <button class="primary-btn" type="button">Скоро выйдет!</button>
+              <a class="secondary-btn" href="#about">Подробнее</a>
+            </div>
+          </div>
+
+          <div class="hero-card">
+            <div class="screen screen-tft">
+              <div class="screen-label">TFT</div>
+              <div class="mini-logo">
+                <span class="mini-logo-core">+</span>
+                <span class="mini-logo-dot"></span>
+              </div>
+              <div class="mini-game-title">MiniGame</div>
+            </div>
+            <div class="screen screen-oled">
+              <div class="screen-label">OLED</div>
+              <div class="oled-text">BOOT</div>
+              <div class="oled-text small">READY</div>
+            </div>
+          </div>
+        </section>
+
+        <section id="about" class="panel">
+          <div class="section-heading">
+            <p class="eyebrow">О проекте</p>
+            <h2>Что это за устройство</h2>
+          </div>
+
+          <div class="info-grid">
+            <div class="info-item">
+              <h3>TFT Screen</h3>
+              <p>Цветной экран для меню, графики и игровых сцен.</p>
+            </div>
+            <div class="info-item">
+              <h3>OLED Screen</h3>
+              <p>Небольшой дисплей для статуса, логов и мини-контролов.</p>
+            </div>
+            <div class="info-item">
+              <h3>ESP32</h3>
+              <p>База проекта: быстрый контроллер, Wi‑Fi, GPIO и стабильная работа.</p>
+            </div>
+          </div>
+        </section>
+
+        <section id="features" class="panel">
+          <div class="section-heading">
+            <p class="eyebrow">Функции</p>
+            <h2>Что будет в проекте</h2>
+          </div>
+
+          <div class="feature-grid">
+            <article class="feature-card">
+              <span class="feature-icon">🎮</span>
+              <h3>Игровой интерфейс</h3>
+              <p>Главное меню, запуск мини-игр и отображение экрана.</p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-icon">⚡</span>
+              <h3>Быстрый запуск</h3>
+              <p>Стабильная работа на ESP32 и низкая задержка.</p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-icon">🔌</span>
+              <h3>Подключение по шине</h3>
+              <p>SPI для TFT и I2C для OLED с понятной схемой питания.</p>
+            </article>
+            <article class="feature-card">
+              <span class="feature-icon">🧩</span>
+              <h3>Расширяемость</h3>
+              <p>Позже можно добавить кнопки, экранные меню и управление по Wi‑Fi.</p>
+            </article>
+          </div>
+        </section>
+
+        <section class="panel coming-panel">
+          <div class="section-heading">
+            <p class="eyebrow">Статус</p>
+            <h2>Скоро выйдет</h2>
+          </div>
+
+          <div class="coming-box">
+            <div class="coming-badge">Скоро выйдет!</div>
+            <ul>
+              <li>Кнопки управления</li>
+              <li>Полная прошивка ESP32</li>
+              <li>Сборка меню</li>
+              <li>Тесты дисплеев</li>
+              <li>Обновления и новые версии</li>
+            </ul>
+          </div>
+        </section>
+
+        <section id="pinout" class="panel">
+          <div class="section-heading">
+            <p class="eyebrow">Распиновка</p>
+            <h2>Подключение экранов</h2>
+          </div>
+
+          <div class="table-wrap">
+            <table>
+              <thead>
+                <tr>
+                  <th>Компонент</th>
+                  <th>Pin</th>
+                  <th>Назначение</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>TFT</td>
+                  <td>GPIO 15</td>
+                  <td>CS</td>
+                </tr>
+                <tr>
+                  <td>TFT</td>
+                  <td>GPIO 2</td>
+                  <td>DC</td>
+                </tr>
+                <tr>
+                  <td>TFT</td>
+                  <td>GPIO 23</td>
+                  <td>MOSI</td>
+                </tr>
+                <tr>
+                  <td>TFT</td>
+                  <td>GPIO 18</td>
+                  <td>SCLK</td>
+                </tr>
+                <tr>
+                  <td>OLED</td>
+                  <td>GPIO 21</td>
+                  <td>SDA</td>
+                </tr>
+                <tr>
+                  <td>OLED</td>
+                  <td>GPIO 22</td>
+                  <td>SCL</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </main>
+
+      <footer class="footer">
+        <p>MiniGame © 2026</p>
+      </footer>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>
